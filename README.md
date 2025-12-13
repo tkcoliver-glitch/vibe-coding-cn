@@ -36,10 +36,9 @@
 [✨ 赞助地址](#-赞助地址)
 [🤝 参与贡献](#-参与贡献)
 
+本仓库的 ai 解读仓库链接：https://zread.ai/tukuaiai/vibe-coding-cn/1-overview
 
 </div>
-
-本仓库的 ai 解读仓库链接：https://zread.ai/tukuaiai/vibe-coding-cn/1-overview
 
 ---
 
