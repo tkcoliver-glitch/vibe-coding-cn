@@ -542,7 +542,7 @@ gantt
 
 ## ✨ 赞助地址
 
-您的支持是我们持续改进项目的动力！
+救救孩子！！！钱包被ai们榨干了，求让孩子蹭蹭会员求求求求求求求求求了（可以tg或者x联系我）🙏🙏🙏
 
 -   **Tron (TRC20)**: `TQtBXCSTwLFHjBqTS4rNUp7ufiGx51BRey`
 -   **Solana**: `HjYhozVf9AQmfv7yv79xSNs6uaEU5oUk2USasYQfUYau`
@@ -550,7 +550,8 @@ gantt
 -   **BNB Smart Chain (BEP20)**: `0xa396923a71ee7D9480b346a17dDeEb2c0C287BBC`
 -   **Bitcoin**: `bc1plslluj3zq3snpnnczplu7ywf37h89dyudqua04pz4txwh8z5z5vsre7nlm`
 -   **Sui**: `0xb720c98a48c77f2d49d375932b2867e793029e6337f1562522640e4f84203d2e`
+-   **币安uid支付**: `572155580`
 
 **Made with ❤️ and a lot of ☕ by [tukuaiai](https://github.com/tukuaiai),[Nicolas Zullo](https://x.com/NicolasZu)and [123olp](https://x.com/123olp)**
 
-[⬆ 回到顶部](#vibe-coding-终极指南-v12)
+[⬆ 回到顶部](#vibe-coding-至尊超级终极无敌指南-V114514)
