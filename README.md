@@ -90,6 +90,19 @@
 
 ---
 
+## ✨ 赞助地址
+
+您的支持是我们持续改进项目的动力！
+
+-   **Tron (TRC20)**: `TQtBXCSTwLFHjBqTS4rNUp7ufiGx51BRey`
+-   **Solana**: `HjYhozVf9AQmfv7yv79xSNs6uaEU5oUk2USasYQfUYau`
+-   **Ethereum (ERC20)**: `0xa396923a71ee7D9480b346a17dDeEb2c0C287BBC`
+-   **BNB Smart Chain (BEP20)**: `0xa396923a71ee7D9480b346a17dDeEb2c0C287BBC`
+-   **Bitcoin**: `bc1plslluj3zq3snpnnczplu7ywf37h89dyudqua04pz4txwh8z5z5vsre7nlm`
+-   **Sui**: `0xb720c98a48c77f2d49d375932b2867e793029e6337f1562522640e4f84203d2e`
+
+---
+
 ### 项目目录结构概览
 
 本项目 `vibe-coding-cn` 的核心结构主要围绕知识管理、AI 提示词的组织与自动化展开。以下是经过整理和简化的目录树及各部分说明：
@@ -187,12 +200,11 @@ backups/
 
 ```mermaid
 graph TB
-  %% 语义样式
   classDef dataFlow stroke:#1565c0,stroke-width:2px;
   classDef control stroke-dasharray: 3 3,stroke:#8e24aa,stroke-width:1.6px;
   classDef async stroke-dasharray: 2 4,stroke:#2e7d32,stroke-width:1.6px;
 
-  subgraph 🌍 外部系统与数据源层
+  subgraph 外部系统与数据源层
     ext_contrib[社区贡献者]
     ext_sheet[Google表格 / 外部表格数据]
     ext_md[外部 Markdown 提示词]
@@ -202,7 +214,7 @@ graph TB
     ext_api -.-> ext_sheet
   end
 
-  subgraph 🔍 数据接入与采集层
+  subgraph 数据接入与采集层
     excel_raw[prompt_excel/*.xlsx 原始表]
     md_raw[prompt_docs/外部MD输入]
     excel_to_docs[prompts-library/scripts/excel_to_docs.py]
@@ -216,7 +228,7 @@ graph TB
     docs_to_excel --> ingest_bus
   end
 
-  subgraph ⚙️ 数据处理与智能决策层（核心）
+  subgraph 数据处理与智能决策层（核心）
     validate[字段校验与规范化] --> transform[格式映射转换引擎]
     transform --> artifacts_md[生成 prompt_docs/规范MD]
     transform --> artifacts_xlsx[生成 prompt_excel/导出XLSX]
@@ -225,7 +237,7 @@ graph TB
     ingest_bus --> validate
   end
 
-  subgraph 📥 执行与消费层
+  subgraph 执行与消费层
     artifacts_md --> catalog_coding[prompts/coding_prompts 编程链路提示词]
     artifacts_md --> catalog_system[prompts/system_prompts 行为约束提示词]
     artifacts_md --> catalog_assist[prompts/assistant_prompts 辅助提示词]
@@ -236,13 +248,13 @@ graph TB
     ai_flow --> deliverables[项目上下文 / 计划 / 代码产出]
   end
 
-  subgraph 👥 用户交互与接口层
+  subgraph 用户交互与接口层
     cli[CLI: python main.py] --> orchestrator
     makefile[Makefile 任务封装] -.-> cli
     readme[README.md 使用指南] -.-> cli
   end
 
-  subgraph 🧱 基础设施与横切能力层
+  subgraph 基础设施与横切能力层
     git[Git 版本控制] -.-> orchestrator
     backups[backups/一键备份.sh · backups/快速备份.py] -.-> artifacts_md
     deps[requirements.txt · scripts/requirements.txt 依赖] -.-> orchestrator
