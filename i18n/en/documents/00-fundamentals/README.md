@@ -11,3 +11,5 @@ Core concepts and methodology for Vibe Coding.
 - [The Way of Programming](./The%20Way%20of%20Programming.md)
 - [Code Organization](./Code%20Organization.md)
 - [General Project Architecture Template](./General%20Project%20Architecture%20Template.md)
+- [Common Pitfalls](./Common%20Pitfalls.md) - Common issues and solutions
+- [Language Layer Elements](./Language%20Layer%20Elements.md) - 12-level code understanding framework
