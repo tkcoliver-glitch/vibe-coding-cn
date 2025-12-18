@@ -1,10 +1,8 @@
 # Python
 __pycache__/
 *.py[cod]
-.history/
 *$py.class
 *.so
-*.jsonl
 .Python
 build/
 develop-eggs/
@@ -16,30 +14,18 @@ lib/
 lib64/
 parts/
 sdist/
-backups/
 var/
 wheels/
 *.egg-info/
 .installed.cfg
 *.egg
 MANIFEST
-*.csv
-*.zip
-*.jsonl
-*.db
-*.pyc
-*.png
-*.jpg
-backups/
 
 # Virtual Environment
-.venv
+.venv/
 env/
 venv/
 ENV/
-env.bak/
-venv.bak/
-*.gz
 
 # IDE
 .vscode/
@@ -48,37 +34,28 @@ venv.bak/
 *.swo
 *~
 .DS_Store
+.history/
 
 # Testing
 .pytest_cache/
 .coverage
 *.cover
-*.py,cover
 .hypothesis/
-.pytest_cache/
 
 # Logs
 *.log
-*.log.[0-9]*
-*.out
-logs/*.log
-logs/*.out
+logs/
 
-# 项目特定
-
-# Jupyter Notebook
-.ipynb_checkpoints
-
-# pyenv
-.python-version
-
-# Celery
+# Data files
+*.csv
+*.zip
+*.jsonl
+*.db
 *.pyc
-celerybeat-schedule
-celerybeat.pid
-
-# SageMath parsed files
-*.sage.py
+*.png
+*.jpg
+*.pdf
+*.gz
 
 # Environments
 .env
@@ -87,21 +64,11 @@ celerybeat.pid
 
 # mypy
 .mypy_cache/
-.dmypy.json
-dmypy.json
 
-# backtest folder
-src/backtest/
-
-# Additional exclusions
-.history/
-.venv_patterns/
-logs/
-
-# Backup files
+# Backup
+backups/
 *.bak
 *.tmp
-backups/gz/
-*.pdf
-1
-backups/
+
+# Wiki (separate repo)
+.github/wiki/
