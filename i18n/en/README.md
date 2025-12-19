@@ -350,23 +350,36 @@ The core structure of this `vibe-coding-cn` project primarily revolves around kn
 │       └── XHS-image-to-PDF-conversion/ # Xiaohongshu image to PDF conversion tool.
 │
 ├── i18n/en/prompts/             # Centralized storage for all types of AI prompts.
-│   ├── 00-meta-prompts/       # Auxiliary prompts.
-│   ├── 02-coding-prompts/          # Prompt collection specifically for programming and code generation.
-│   │   └── ... (specific coding prompt files)
+│   ├── 00-meta-prompts/             # Meta prompts (prompts that generate prompts)
+│   ├── 01-system-prompts/           # AI system-level prompts for behavior and framework
+│   │   └── ... (system prompts)
 │   │
-│   ├── 01-system-prompts/          # AI system-level prompts, used to set AI behavior and framework.
-│   │   └── ... (other system prompts)
+│   ├── 02-coding-prompts/           # Prompts for programming and code generation
+│   │   └── ... (coding prompt files)
 │   │
-│   └── 03-user-prompts/            # User-defined or commonly used prompts.
-│       ├── ASCII Art Generation.md # ASCII art generation prompts.
-│       ├── Data Pipeline.md        # Data pipeline processing prompts.
-│       └── ... (other user prompts)
+│   └── 03-user-prompts/             # User-defined or commonly used prompts
+│       └── ... (user prompts)
 │
 ├── i18n/en/skills/              # Centralized storage for all types of skills.
-    ├── claude-skills            # Meta-skill for generating SKILLS
-    │   ├── SKILL.md
-    │   └── ... (others)
-    └── ... (and other skills)
+    ├── 00-meta-skills/              # Meta skills
+    │   └── claude-skills/           # Skills generator
+    ├── 01-ai-tools/                 # AI CLI tools
+    │   ├── claude-code-guide/
+    │   └── claude-cookbooks/
+    ├── 02-databases/                # Database skills
+    │   ├── postgresql/
+    │   └── timescaledb/
+    ├── 03-crypto/                   # Cryptocurrency/quantitative
+    │   ├── ccxt/
+    │   ├── coingecko/
+    │   ├── cryptofeed/
+    │   ├── hummingbot/
+    │   └── polymarket/
+    └── 04-dev-tools/                # Development tools
+        ├── telegram-dev/
+        ├── twscrape/
+        ├── snapdom/
+        └── proxychains/
 ```
 
 ---
@@ -384,10 +397,10 @@ In one sentence: Vibe Coding = **Planning-driven + Context-fixed + AI Pair Execu
 Core Asset Mapping:
 ```
 i18n/en/prompts/
-  02-coding-prompts/        # Core prompts for demand clarification, planning, and execution chain.
-  01-system-prompts/        # System-level prompts constraining AI behavior.
-  00-meta-prompts/     # Auxiliary/cooperative prompts.
-  03-user-prompts/          # Reusable user-side prompts.
+  00-meta-prompts/          # Meta prompts for generating prompts
+  01-system-prompts/        # System-level prompts constraining AI behavior
+  02-coding-prompts/        # Core prompts for demand clarification, planning, and execution
+  03-user-prompts/          # Reusable user-side prompts
 i18n/en/documents/
   Templates and Resources/Code Organization.md, Templates and Resources/General Project Architecture Template.md, Methodology and Principles/Development Experience.md, Methodology and Principles/System Prompt Construction Principles.md, and other knowledge bases.
 backups/
@@ -432,10 +445,10 @@ graph TB
   end
 
   subgraph consume_layer[Execution and Consumption Layer]
-    artifacts_md --> catalog_coding[i18n/en/prompts/coding_prompts]
-    artifacts_md --> catalog_system[i18n/en/prompts/system_prompts]
-    artifacts_md --> catalog_assist[i18n/en/prompts/assistant_prompts]
-    artifacts_md --> catalog_user[i18n/en/prompts/user_prompts]
+    artifacts_md --> catalog_coding[i18n/en/prompts/02-coding-prompts]
+    artifacts_md --> catalog_system[i18n/en/prompts/01-system-prompts]
+    artifacts_md --> catalog_meta[i18n/en/prompts/00-meta-prompts]
+    artifacts_md --> catalog_user[i18n/en/prompts/03-user-prompts]
     artifacts_md --> docs_repo[i18n/en/documents/*]
     artifacts_md --> new_consumer[Reserved: Other Downstream Channels]
     catalog_coding --> ai_flow[AI Pair Programming Workflow]
